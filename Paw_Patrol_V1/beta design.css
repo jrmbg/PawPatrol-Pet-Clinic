@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #FFF8DC;
+    min-height: 200vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 10px;
+    z-index: 10000;
+    font-family: Verdana, sans-serif;
+    background-color: antiquewhite;
+}
+#S1{
+    display: none;
+}
+i{
+    color: #fff;
+    cursor: pointer;
+}
+header img{
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.search-box{
+    flex: 1;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid black;
+    border-radius: 30px;
+}
+.search-box input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #f2f2f2f2;
+    border-radius: 30px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+.search-box button{
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.9);
+    background: #000;
+}
+header .hamburger{
+    font-size: 25px;
+    display: block;
+    margin-right: 10px;
+}
+header .hamburger i{
+    color: #000;
+}
+a, button{
+    cursor: pointer;
+}
+header.sticky{
+    padding: 5px 100px;
+    background: antiquewhite;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 10%;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header ul li a:hover{
+    color: #f8bc54;
+    text-decoration: underline;
+}
+header ul li a.active{
+    color: #f8bc54;
+}
+.sec1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.navigation{
+    display: block;
+    position: fixed;
+    right: -500px;
+    width: 165px;
+    height: 50%;
+    background-color: antiquewhite;
+    margin-top: 0;
+    margin-right: 70x;
+    border: none;
+    border-radius: 5px;
+    box-shadow: solid#fff;
+    transition: .5s;
+    z-index: 9999;
+}
+.navigation ul{
+    margin-top: 80px;
+    margin-left: 10px;
+}
+.navigation ul li{
+    color: #000;
+    text-align: left;
+    text-transform: uppercase;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 20px;
+    border-bottom: 1 solid #fff;
+    width: 160px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+.navigation ul li:hover{
+    color: #fff;
+    background-color: #f8bc54;
+}
+.navigation ul li a{
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+}
+.navigation ul li i{
+    color: #000;
+    font-size: 20px;
+    padding-left: 10px;
+    text-align: right;
+    margin-right: 5px;
+    margin-left: -10px;
+}
+.navigation.active{
+    right: 0;
+}
+.hamburger.open {
+    background-color: transparent;
+    transform: rotate(-45deg) translate(6px 5px);
+}
+
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    header ul{
+        position: fixed;
+        top: 100px;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    header .navigation{
+        display: block;
+        width: 100px;
+        text-align: center;
+        font-size: 50px;
+    }
+    #S1:checked ~ ul{
+        right: 0;
+    }
+}
+@media(max-width: 600px){
+    header .logo{
+        margin-left: 8;
+    }
+    header ul{
+        width: 100%;
+    }
+}
+
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    header ul{
+        position: fixed;
+        top: 100px;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    header .navigation{
+        display: block;
+        width: 100px;
+        text-align: center;
+        font-size: 50px;
+    }
+    #S1:checked ~ ul{
+        right: 0;
+    }
+}
+@media(max-width: 600px){
+    header .logo{
+        margin-left: 8;
+    }
+    header ul{
+        width: 100%;
+    }
+}
+/* Book Now media */
+@media(max-width: 600px){
+    .register{
+        min-width: 200px;
+    }
+    .user-input{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .user-input:nth-child(2n){
+        justify-content: space-between;
+    }
+    .input-info{
+        max-height: 300px;
+        overflow: auto;
+    }
+    .input-info::-webkit-scrollbar{
+        width:  0;
+    }
+    }
+
+@media screen and (mas-width: 600px)
+{
+    .content h1,
+.content h3{
+    font-family: 'Georgia', cursive;
+    font-size: 36px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-box input {
+        width: 100%;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: #f2f2f2;
+        border-radius: 30px;
+        color: #000;
+        font-size: 1em;
+        text-align: center;
+        padding: 0.9em 0.9em;
+    }
+
+    .search-box button {
+        cursor: pointer;
+        width: 2.5em;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: scale(0.9);
+        background: #000;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header ul {
+        margin-left: 5%; 
+    }
+}
+
+@media(max-width:1000px){
+    header ul{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+    }
+
+    header ul a{
+        display: block;
+        margin: 18px 0;
+}
+
+    header ul.open{}
+}
+
